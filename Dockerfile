@@ -80,8 +80,8 @@ RUN addgroup --system --gid 1001 nodejs \
 COPY --from=api-deploy --chown=opencall:nodejs /prod/api ./
 
 # Copy migrations + scripts
-COPY backend/infra ./infra
-COPY backend/scripts ./scripts
+COPY infra ./infra
+COPY scripts ./scripts
 
 USER opencall
 
